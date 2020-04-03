@@ -1,0 +1,34 @@
+<h1>Form of register CoPay</h1>
+<div class="center-content">
+    <form [formGroup]="copagoForm" (ngSubmit)="onSubmit()" style="width: 70%;">
+        <div class="form-element">
+            <label for="id">Identificacion</label>
+            <input type="text" name="id" id="id" class="form-input" placeholder="Identificacion" formControlName="Identificacion">
+           
+        </div>
+        <div class="form-element">
+            <label for="personSalary">Salario</label>
+            <input type="number" name="personSalary" id="personSalary" class="form-input" placeholder="Salario" formControlName="Salario">
+           
+        </div>
+        <div class="form-element">
+            <label for="serviceValue">Valor servicio</label>
+            <input type="number" name="serviceValue" id="serviceValue" class="form-input" placeholder="Valor Servicio" formControlName="ValorServicio">
+            
+        </div>
+        <div>
+            <button type="submit" class="dodger_blue btn">Registrar</button>
+        </div>
+        <div class="center-content">
+            <div *ngIf="formularioInvalido == true">
+                <div class="information-block error-block"><span class="message">Formulario invalido</span></div>
+            </div>
+        </div>
+        <div class="center-content">
+            <div *ngIf="guardado">
+                <div class="information-block error-block" *ngIf="guardado == false"><span class="message">Persona ya registrada</span></div>
+                <div class="information-block success-block" *ngIf="guardado == true"><span class="message">Persona registrada</span></div>
+            </div>
+        </div>
+    </form>
+</div>
