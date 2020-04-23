@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CopagoRegistroComponent } from './components/copago-registro/copago-registro.component';
 import { LiquidacionesComponent } from './components/liquidaciones/liquidaciones.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FiltroLiquidacionPipe } from './pipe/filtro-liquidacion.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
     CounterComponent,
     FetchDataComponent,
     CopagoRegistroComponent,
-    LiquidacionesComponent
+    LiquidacionesComponent,
+    FiltroLiquidacionPipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

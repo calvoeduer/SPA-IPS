@@ -62,8 +62,10 @@ namespace Datos
             if (!dataReader.HasRows) return null;
             CoPago coPago = new CoPago();
             coPago.Identificacion = (string)dataReader["Identificacion"];
-            coPago.Salario = (decimal)dataReader["Salario"];
-            coPago.ValorServicio = (decimal)dataReader["ValorServicio"];
+            float salario = (float)dataReader["Salario"];
+            coPago.Salario = (decimal)salario;
+            float valorServicio = (float)dataReader["ValorServicio"];
+            coPago.ValorServicio = (decimal)valorServicio;
             return coPago;
         }
 
